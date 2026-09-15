@@ -13,38 +13,50 @@ AI Student at the HCM University of Science (HCMUS), interested in building prac
 
 ## 🛠️ Technologies
 
-**Programming:** Python, C++, C#
+**Programming:** Python, C++, SQL
 
-**AI / ML:** PyTorch, Scikit-learn, OpenCV, YOLO
+**Deep Learning and Frameworks:** PyTorch, TensorFlow, Scikit-learn, Hugging Face Transformers, OpenCV,
+ONNX
 
-**LLM / NLP:** LangChain, LLM APIs, RAG
+**Generative AI and Search:** Large Language Models (LLMs), RAG, LangChain, Multimodal Embeddings (SigLIP-2,
+CLIP), Whisper (ASR), BM25, Reciprocal Rank Fusion (RRF)
 
-**Development:** Unity, Git, GitHub, Firebase
+**Vector Databases and Storage:** FAISS, Milvus, SQLite, Firebase / Firestore
 
+**Backend and MLOps:** FastAPI, RESTful APIs, Docker, Ollama, Git / GitHub
 ## 🚀 Featured Projects
 
 ### TRAKE — Multimodal Video Retrieval System
 
-Designed and built a multimodal video retrieval system for the AIC2026 challenge, combining natural-language query understanding, visual retrieval, temporal grounding, event alignment, semantic verification, and frame selection.
+* Architected a three-stage video retrieval pipeline (Global Retrieval → Local Search → Temporal Optimization) to
+resolve complex sequential natural-language queries across large-scale video archives.
+* Leveraged SigLIP-2 to extract rich cross-modal visual-semantic representations, executing high-throughput nearest
+neighbor similarity searches via memory-optimized FAISS in-memory indices.
+* Designed and implemented a Temporal Dynamic Programming algorithm with adaptive gap penalties to
+chronologically stitch discrete spatial keyframes into coherent event sequences.
+* Restructured data mapping to lightweight O(1) index lookups, cutting memory overhead and achieving sub-second
+query retrieval latency (< 1s per query) across the entire benchmark dataset (177321 frames).
 
 ### ARCampus-HCMUS — AI AR Campus Explorer
 
-Integrated an AR campus navigation system with a chatbot into a unified mobile application, combining AR, GPS-based navigation, Firebase, and conversational AI to support campus exploration and navigation.
+* Developed a Unity-based mobile application combining Augmented Reality (AR) navigation and an AI chatbot to
+help students explore and navigate the HCMUS campus.
+* Integrated GPS, compass, A* pathfinding, 2D maps, and AR waypoints for real-time outdoor navigation, along
+with indoor map support.
+* Built an AI chatbot pipeline with intent classification, entity extraction/linking, context retrieval from Firebase/Firestore,
+conversation history, and LLM-based response generation
+* Integrated Firebase, FastAPI, SQLite, and Ollama to support authentication, campus data management, and AI
+services
 
 ### License Plate Recognition
 
-A team-based computer vision project involving license plate detection and OCR. Contributed to code debugging, dataset collection, and supporting the development of the recognition pipeline.
-
+* Developed an online license plate detection service using YOLOv5 and ONNX inference.
+* Converted and deployed the trained detection model for lightweight inference in a web-based application.
+* Built an API-based backend for processing uploaded images and returning detected license plate regions.
 ### Pikachu Game
 
-A team-based Python/Pygame project. Contributed to gameplay implementation and visual assets.
+* A team-based Python/Pygame project. Contributed to gameplay implementation and visual assets.
 
-## 📚 Currently Learning
-
-* LangChain & LLM application development
-* Retrieval-Augmented Generation (RAG)
-* Multimodal AI
-* Machine Learning & Deep Learning
 
 ## 📫 Contact
 
