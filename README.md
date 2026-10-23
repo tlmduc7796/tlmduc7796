@@ -1,12 +1,10 @@
-# Hi, I'm Minh Duc 
+# Greetings, I'm Minh Duc 
 
-AI Student at the HCM University of Science (HCMUS), interested in building practical AI systems and exploring how AI can be integrated into real-world applications.
+AI Student at HCM University of Science (HCMUS), interested in building practical AI systems and exploring how AI can be integrated into real-world applications.
 
 ## 🎯 Interests
 
-* Artificial Intelligence & Machine Learning
-* Computer Vision
-* Natural Language Processing
+* Artificial Intelligence, Machine Learning & Deep Learning 
 * Large Language Models & RAG
 * Multimodal AI
 * AI Application Development
