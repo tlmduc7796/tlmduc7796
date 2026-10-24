@@ -24,17 +24,12 @@ CLIP), Whisper (ASR), BM25, Reciprocal Rank Fusion (RRF)
 **Backend and MLOps:** FastAPI, RESTful APIs, Docker, Ollama, Git / GitHub
 ## 🚀 Featured Projects
 
-### TRAKE — Multimodal Video Retrieval System
+### MOSAIC - Interactive Vietnamese Video Retrieval System 
 
-* Architected a three-stage video retrieval pipeline (Global Retrieval → Local Search → Temporal Optimization) to
-resolve complex sequential natural-language queries across large-scale video archives.
-* Leveraged SigLIP-2 to extract rich cross-modal visual-semantic representations, executing high-throughput nearest
-neighbor similarity searches via memory-optimized FAISS in-memory indices.
-* Designed and implemented a Temporal Dynamic Programming algorithm with adaptive gap penalties to
-chronologically stitch discrete spatial keyframes into coherent event sequences.
-* Restructured data mapping to lightweight O(1) index lookups, cutting memory overhead and achieving sub-second
-query retrieval latency (< 1s per query) across the entire benchmark dataset (177321 frames).
-
+* Architected a multimodal video retrieval system for sequential natural-language queries over 1,487 videos (397,591 keyframes): an LLM query decomposer, dense retrieval (SigLIP-2, Moondream captions) and sparse retrieval (Florence-2 OCR, Whisper ASR, YOLO objects), fused with adaptive weighted Reciprocal Rank Fusion, followed by a two-stage global--local search.
+* Used SigLIP-2 embeddings with FAISS inner-product indices on GPU to run large-scale similarity search over the keyframe corpus.
+* Designed two $O(N\cdot K)$ temporal dynamic-programming algorithms, PANDA (bidirectional ideal-gap penalty) and ANCHOR (anchor-event alignment with a bounded asymmetric penalty), to stitch keyframes into ordered event sequences. On a 36-query benchmark (123 events), they raised temporal monotonicity from 36.11\% to 100\% and sequence accuracy from 8.33\% to 13.89\%, with PANDA aligning in 0.28\,s per query.
+  
 ### ARCampus-HCMUS — AI AR Campus Explorer
 
 * Developed a Unity-based mobile application combining Augmented Reality (AR) navigation and an AI chatbot to
@@ -46,15 +41,14 @@ conversation history, and LLM-based response generation
 * Integrated Firebase, FastAPI, SQLite, and Ollama to support authentication, campus data management, and AI
 services
 
-### License Plate Recognition
+### Smart EV Journey - Interactive tool for electric cars drivers and investors 
 
-* Developed an online license plate detection service using YOLOv5 and ONNX inference.
-* Converted and deployed the trained detection model for lightweight inference in a web-based application.
-* Built an API-based backend for processing uploaded images and returning detected license plate regions.
-### Pikachu Game
-
-* A team-based Python/Pygame project. Contributed to gameplay implementation and visual assets.
-
+* Developed an EV charging recommendation engine that filters stations by connector compatibility and battery reachability, then ranks them
+using arrival-time occupancy, estimated wait and charging time, route detour, and battery reserve.
+* Built a SimPy charging-session simulator and an offline pipeline for training six horizon-specific XGBoost occupancy models, forecasting
+5--30 minutes ahead from 40 temporal and spatial features using synthetic data.
+* Implemented a map-based station-planning feature for Ho Chi Minh City that ranks candidate sites by demand potential, marginal coverage,
+grid and site readiness, and network gaps, with results served through versioned FastAPI endpoints.
 
 ## 📫 Contact
 
